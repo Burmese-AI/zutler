@@ -1,0 +1,16 @@
+# Base image
+FROM python:3.9-slim
+
+# Base Working dir
+WORKDIR /Zutler
+
+# Will need a clearner copying process when this gets modulated
+COPY requirements.txt .
+COPY main.py .
+
+RUN pip install -r requirements.txt
+
+# Port exposure 
+EXPOSE 8081
+
+CMD ["python", "main.py"]
