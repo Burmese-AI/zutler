@@ -5,6 +5,7 @@ FROM python:3.9-slim
 WORKDIR /Zutler
 
 # Will need a clearner copying process when this gets modulated
+COPY bot_token.py .
 COPY requirements.txt .
 COPY main.py .
 

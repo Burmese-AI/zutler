@@ -1,9 +1,8 @@
-TOKEN = '7263588792:AAHFDosZxU0sNb0fH43dX-MLEvrWgiXVVwM'
-
 """necessities"""
 import asyncio
 from aiogram import Dispatcher, Bot, Router, types
 from aiogram.client.default import DefaultBotProperties
+from config import TOKEN
 
 """utilities"""
 from aiogram.filters import Command
@@ -30,7 +29,7 @@ async def cmd_start(message: types.Message) -> None:
 Hello, {hbold(message.from_user.full_name)}!
 This is your personal butler app built with love.
 Please use {hitalic("/help")} to see a list of available commands.
-Contact me {hitalic("@dummyemail@dummy.com")} to request new features.
+Contact me at {hitalic("dummyemail@dummy.com")} to request new features.
 """
 
     await message.answer(
